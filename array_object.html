@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,tr,td{
+        border: 2px solid grey;
+        padding:10px;
+        color: darkred;
+    }
+    th{
+        background-color: green;
+    }
+    td{
+        background-color: yellowgreen;
+    }
+</style>
+<body>
+    <script>
+        var employee = [{name:'yogesh',age:22,address:'mumbai'},
+                        {name:'arbaj',age:23,address:'ahmednagar'},
+                        {name:'dinesh',age:24,address:'jalgoan'},
+                        {name:'adesh',age:25,address:'pune'},
+                        {name:'dipak',age:26,address:'ahmdabad'},
+                        {name:'aditya',age:27,address:'aurangabad'},
+                        {name:'anurag',age:28,address:'osmanabad'},
+        ];
+
+        document.write("<h2>Employee details</h2>");
+         document.write("<table>");
+          document.write("<tr>");
+           document.write("<th>Name</th>");
+            document.write("<th>Age</th>");
+             document.write("<th>Address</th>");
+              document.write("</tr>");
+              for(let i = 0; i <employee.length;i++){
+                document.write("<tr>");
+                    document.write("<td>" + employee[i].name + "</td>");
+                    document.write("<td>" + employee[i].age + "</td>");
+                    document.write("<td>" + employee[i].address + "</td>");
+                    document.write("</te>");
+              }
+              document.write("</table>");
+              
+    </script>
+</body>
+</html>

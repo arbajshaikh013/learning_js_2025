@@ -80,5 +80,40 @@
           document.write(x,"<br>");
 
     </script>
+    <script>
+
+        document.write("<h2>slice Example</h2>");
+       
+        var a = ["sahil0","arbaj1","neha2","suknya3","prasad4","deepak5","divya6"];
+
+            document.write(a,"<br>");
+
+            var b = a.slice(1,4); //(start,end)
+              
+             document.write(b,"<br>");
+
+             var c = a.slice(0,3); //(start,end)
+              
+             document.write(c,"<br>");
+
+              var d = a.slice(3,5); //(start,end)
+              
+             document.write(d,"<br>");
+    </script>
+
+    <script>
+         document.write("<h2>splice Example</h2>");
+
+         var x = ["sahil0","arbaj1","neha2","suknya3","prasad4","deepak5","divya6"];
+
+             document.write(x,"<br>");
+
+             x.splice(2,4,"virat","rohit"); // (index,how many delete,"newvalue")
+              document.write(x,"<br>");
+
+
+
+
+    </script>
 </body>
 </html>
