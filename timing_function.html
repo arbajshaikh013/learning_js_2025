@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .clock_d{
+        font-family: 'times new roman',times,serif;
+        color: green;
+        font-size: 100px;
+        color: white;
+        background-color: black;
+    }
+</style>
+<body>
+    <h1>Digital clock</h1>
+    <h2 class="clock_d" id="clock"> </h2>
+<h1>counter</h1>
+
+<h3 id="count">0</h3>
+
+<button onclick="startCounter()">Start</button>
+
+<button onclick="stopCounter()">Stop</button>
+
+<button onclick="resetCounter()">Reset</button>
+
+<script>
+    let count = 0;
+    let counter = null;
+    function startCounter(){
+        if(counter === null){
+            counter = setInterval(function(){
+                count++;
+                document.getElementById("count").innerHTML = count;
+            },100);
+        }
+    }
+    function startCounter(){
+        clearInterval(counter);
+        counter= null;
+    }
+</script>
+
+
+
+
+
+<!--informatin update in 10sec change karne ke liye -->
+
+<p id="msg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo amet dolorum aliquam saepe quisquam repellat dignissimos tenetur esse inventore provident temporibus modi perferendis, quos facere nam sunt totam quae cupiditate.</p>
+<script>
+    setTimeout(function(){
+        document.getElementById("msg").innerHTML = "hello its shaikh";
+    },10000)
+</script>
+
+
+
+<!--clock ke liye-->
+   <script>
+    function showTime(){
+        let now = new Date();
+        let time = now.toLocaleTimeString();
+        document.getElementById("clock").innerHTML = time;
+        setInterval(showTime,1000);
+    }
+    showTime();
+   </script>
+</body>
+</html>
